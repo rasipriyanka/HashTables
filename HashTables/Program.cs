@@ -7,7 +7,7 @@ namespace HashTables
         public static void CountNumberOfOccurance(string paragraph)
         {
             MyMapNode<string, int> hashTabe = new MyMapNode<string, int>(6); //creting object
-            string[] words = paragraph.Split(' ');
+            string[] words=paragraph.Split(' ');
             foreach (string Word in words)
             {
                 if (hashTabe.Exists(Word))
@@ -17,6 +17,10 @@ namespace HashTables
             }
             Console.WriteLine("Displaying after add operation ");
             hashTabe.Display();
+            string s = "avoidable";
+            hashTabe.Remove(s);
+            Console.WriteLine("Displaying after Remove operation ");
+            hashTabe.Display();
         }
         static void Main(string[] args)
         {
@@ -24,5 +28,4 @@ namespace HashTables
                 "into a paranoids avoidable situations");
         }
     }
-}
-
+    }
